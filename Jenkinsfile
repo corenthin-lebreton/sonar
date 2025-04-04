@@ -28,5 +28,16 @@ pipeline {
             }
 
         }
+
+        stage('git pull'){
+            steps {
+                sh 'git https://github.com/corenthin-lebreton'
+            }
+        }
+        stage('create image'){
+            steps {
+                sh 'docker build -t .'
+            }
+        }
     }
 }
