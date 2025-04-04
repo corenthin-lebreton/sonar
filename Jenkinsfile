@@ -36,7 +36,7 @@ pipeline {
         }
         stage('create image'){
             steps {
-                sh 'docker build -t .'
+                sh 'docker build -t nginxcustom:latest .'
             }
         }
     }
