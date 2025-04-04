@@ -31,7 +31,7 @@ pipeline {
 
         stage('git pull'){
             steps {
-                sh 'git https://github.com/corenthin-lebreton'
+                git 'https://github.com/corenthin-lebreton/sonar'
             }
         }
         stage('create image'){
